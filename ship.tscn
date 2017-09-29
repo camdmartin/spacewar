@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://ship.gd" type="Script" id=1]
+[ext_resource path="res://ship.png" type="Texture" id=2]
+
+[node name="Ship" type="Area2D"]
+
+input/pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+rotation_speed = 1.5708
+engine_thrust = 100
+maximum_velocity = 1000
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 2 )
+
+

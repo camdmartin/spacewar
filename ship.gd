@@ -17,6 +17,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	
+	# player input responses
 	if Input.is_action_pressed("player_left"):
 		rotation += rotation_speed * delta
 	if Input.is_action_pressed("player_right"):
@@ -25,7 +27,7 @@ func _process(delta):
 	if Input.is_action_pressed("forward_thrust"):
 		acceleration = Vector2(engine_thrust, 0).rotated(rotation)
 	elif Input.is_action_pressed("reverse_thrust"):
-		acceleration = Vector2(engine_thrust, 0).rotated(rotation - PI/2)
+		acceleration = Vector2(engine_thrust, 0).rotated(rotation - PI)
 	else:
 		acceleration = Vector2(0, 0)
 	
@@ -36,5 +38,20 @@ func _process(delta):
 	velocity += acceleration * delta
 	pos += velocity * delta
 	
+	# apply gravity
+	for g in 
+	
+	# check for off-screen, if so, wrap
+	if pos.x < 0:
+		pos.x = screen_size.x
+	elif pos.x > screen_size.x:
+		pos.x = 0
+	
+	if pos.y < 0:
+		pos.y = screen_size.y
+	elif pos.y > screen_size.y:
+		pos.y = 0
+	
+	# set variables after calculating all changes to movement
 	set_pos(pos)
 	set_rot(rotation - PI/2)

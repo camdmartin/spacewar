@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://ship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://planet.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 550.179, 292.424 )
+transform/pos = Vector2( 542.813, 292.424 )
+
+[node name="Planet" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 232.042, 294.657 )
 
 

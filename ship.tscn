@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://ship.gd" type="Script" id=1]
-[ext_resource path="res://ship.png" type="Texture" id=2]
+[ext_resource path="res://cursor-3-xxl.tex" type="Texture" id=2]
 
 [node name="Ship" type="Area2D"]
 
@@ -17,7 +17,7 @@ maximum_velocity = 1000
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/scale = Vector2( 0.05, 0.05 )
+transform/scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
 
